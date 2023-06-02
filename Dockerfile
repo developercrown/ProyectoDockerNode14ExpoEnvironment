@@ -1,14 +1,11 @@
 # Define la imagen base
-FROM node:14
+FROM node:16.13.0
 
 # Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
 
 # Copia el archivo package.json al directorio de trabajo
-# COPY package.json .
-
-# Instala las dependencias
-RUN npm install
+# COPY package*.json ./
 
 # Instala globalmente Expo CLI
 RUN npm install -g expo-cli
